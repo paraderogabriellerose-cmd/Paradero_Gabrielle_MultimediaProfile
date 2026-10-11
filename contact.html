@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -35,15 +36,15 @@
 
 <body>
 
-    <h1>Contact Me</h1>
+    <h1 id="contact-section">Contact Me</h1>
 
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Me</a> |
-        <a href="hobbies.html">Hobbies</a> |
-        <a href="favorites.html">Favorites</a> |
-        <a href="goals.html">Goals</a> |
-        <a href="contact.html">Contact Me</a>
+        <a class="nav-link" href="index.html">Home</a> |
+        <a class="nav-link" href="about.html">About Me</a> |
+        <a class="nav-link" href="hobbies.html">Hobbies</a> |
+        <a class="nav-link" href="favorites.html">Favorites</a> |
+        <a class="nav-link" href="goals.html">Goals</a> |
+        <a class="nav-link" href="contact.html">Contact Me</a>
     </nav>
 
     <hr>
@@ -143,7 +144,7 @@
         I would like to receive updates.
         <br><br>
 
-        <input type="submit" value="Send Message">
+        <input type="submit" value="Send Message" class="btn primary">
         <input type="reset" value="Clear Form">
 
     </form>
