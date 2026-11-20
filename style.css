@@ -1,63 +1,61 @@
+/* 1. GENERAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-
     color: #333333;
-
     background-color: lightblue;
-
     font-family: Arial, sans-serif;
-
     font-size: 16px;
-
     line-height: 1.6;
-
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
-/* Main Heading */
+/* 2. MAIN HEADING */
 
 h1 {
-
     text-align: center;
-
     text-transform: uppercase;
-
     text-decoration: underline;
-
     letter-spacing: 2px;
-
     font-family: Georgia, serif;
-
     font-size: 32px;
-
     font-weight: bold;
-
     color: white;
-
     background: linear-gradient(to right, #4169e1, #9370db);
-
     padding: 20px;
+}
 
+/* Decorative line under h1 */
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, blue, purple);
+    margin: 10px auto;
+    border-radius: 5px;
 }
 
 
-/* Other Headings */
+/* 3. OTHER HEADINGS */
 
 h2 {
-
     color: darkblue;
-
     font-family: Georgia, serif;
-
     font-size: 24px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
-
 }
 
 
-/* Profile Information */
+/* 4. PROFILE INFORMATION */
 
 .profile-info {
     color: darkgreen;
@@ -67,8 +65,8 @@ h2 {
     letter-spacing: 0.5px;
     background-color: white;
 
-    /* CSS Box Model */
     width: 80%;
+    max-width: 100%;
     height: auto;
     padding: 15px;
     border: 2px solid darkgreen;
@@ -78,95 +76,92 @@ h2 {
 }
 
 
-/* Navigation */
+/* 5. NAVIGATION */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
 
 .nav-link {
-
-    color: white;
-
+    color: blue;
     font-family: Arial, sans-serif;
-
     font-size: 16px;
-
     font-weight: bold;
-
     text-decoration: none;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
+    padding: 8px;
+    margin: 5px;
+}
 
+/* Navigation hover effects */
+
+.nav-link:link {
+    color: blue;
+}
+
+.nav-link:visited {
+    color: darkgreen;
+}
+
+.nav-link:hover {
+    color: purple;
+    text-decoration: underline;
+}
+
+.nav-link:active {
+    color: red;
 }
 
 
-/* Section Titles */
+/* 6. SECTION TITLES */
 
 .section-title {
-
     color: purple;
-
     font-family: Georgia, serif;
-
     font-size: 24px;
-
     font-weight: bold;
-
     text-transform: capitalize;
-
 }
 
 
-/* Form Labels */
+/* 7. FORM LABELS */
 
 .form-label {
-
     font-family: Arial, sans-serif;
-
     font-size: 16px;
-
     font-weight: bold;
-
 }
 
 
-/* Form Inputs */
+/* 8. FORM INPUTS */
 
 .form-input {
-
     color: blue;
-
     font-family: Arial, sans-serif;
-
     font-size: 15px;
-
+    max-width: 100%;
 }
 
 
-/* Buttons */
+/* 9. BUTTONS */
 
 .btn {
-
     font-family: Arial, sans-serif;
-
     font-size: 16px;
-
     font-weight: bold;
-
 }
-
-
-/* Primary Button */
 
 .primary {
-
     color: white;
-
     background-color: darkblue;
-
 }
 
 
-/* Main Header */
+/* 10. MAIN HEADER */
 
 #main-header {
     position: relative;
@@ -180,25 +175,19 @@ h2 {
 }
 
 
-/* Contact Section */
+/* 11. CONTACT SECTION */
 
 #contact-section {
-
     text-align: center;
-
     text-transform: uppercase;
-
     letter-spacing: 2px;
-
     color: darkblue;
-
     background: linear-gradient(to right, lightyellow, lavender);
-
     padding: 15px;
-
 }
 
-/* Contact Form */
+
+/* 12. CONTACT FORM */
 
 form {
     background: linear-gradient(to bottom, white, lavender);
@@ -210,125 +199,21 @@ form {
     opacity: 0.95;
 }
 
- /* Updated for CSS Lesson 2.1 */
- 
- /* CSS Lists */
-
-ul {
-    list-style-type: square;
-    padding-left: 30px;
+input,
+textarea,
+select,
+button {
+    font: inherit;
+    max-width: 100%;
 }
-
-ol {
-    list-style-type: upper-alpha;
-    padding-left: 30px;
-}
-
-/* CSS Links */
-
-.nav-link {
-    padding: 8px;
-    margin: 5px;
-    text-decoration: none;
-}
-
-.nav-link:link {
-    color: blue;
-}
-
-.nav-link:visited {
-    color: purple;
-}
-
-.nav-link:hover {
-    color: red;
-    text-decoration: underline;
-}
-
-.nav-link:active {
-    color: green;
-}
-
-.profile-image {
-    position: relative;
-    z-index: 2;
-    float: left;
-    margin: 10px 20px 10px 0;
-    border: 3px solid darkblue;
-}
-
-/* Clear Float */
-
-.clear-section {
-    clear: both;
-}
-
-
-/* MY PHOTO GALLERY */
-
-#gallery {
-    margin: 30px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 3px solid white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-/* PICTURE HOVER EFFECT */
-
-.gallery img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-}
-
-
-/* NAVIGATION LINK EFFECTS */
-
-.nav-link:hover {
-    color: purple;
-    text-decoration: underline;
-}
-
-.nav-link:active {
-    color: red;
-}
-
-.nav-link:visited {
-    color: darkgreen;
-}
-
-
-/* CONTACT FORM FOCUS EFFECT */
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     outline: 2px solid royalblue;
     border-color: royalblue;
     background-color: #f0f8ff;
 }
-
-
-/* BUTTON HOVER AND CLICK EFFECTS */
 
 button:hover,
 input[type="submit"]:hover {
@@ -342,6 +227,74 @@ input[type="submit"]:active {
 }
 
 
+/* 13. CSS LISTS */
+
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+ol {
+    list-style-type: upper-alpha;
+    padding-left: 30px;
+}
+
+
+/* 14. PROFILE IMAGE */
+
+.profile-image {
+    position: relative;
+    z-index: 2;
+    float: left;
+    margin: 10px 20px 10px 0;
+    border: 3px solid darkblue;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Clear Float */
+
+.clear-section {
+    clear: both;
+}
+
+
+/* 15. MY PHOTO GALLERY */
+
+#gallery {
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Picture Hover Effect */
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 16. GALLERY PSEUDO-ELEMENTS */
 
 #gallery h2::before {
     content: "[ ";
@@ -353,15 +306,148 @@ input[type="submit"]:active {
     content: " ]";
     color: purple;
     font-weight: bold;
-} 
+}
 
-/* Add a decorative line under h1 headings */
-h1::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(to right, blue, purple);
-    margin: 10px auto;
-    border-radius: 5px;
+
+/* 17. RESPONSIVE IMAGES AND MULTIMEDIA */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video,
+iframe {
+    max-width: 100%;
+}
+
+
+/* 18. RESPONSIVE TABLES */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    overflow-wrap: break-word;
+}
+
+
+/* 19. TABLET RESPONSIVE LAYOUT */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .profile-info {
+        width: 95%;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: auto;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+}
+
+
+/* 20. MOBILE RESPONSIVE LAYOUT */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .profile-info {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Mobile Navigation */
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Mobile Profile Image */
+
+    .profile-image {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    /* Mobile Photo Gallery */
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery img {
+        height: auto;
+    }
+
+    /* Mobile Forms */
+
+    form {
+        padding: 12px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        width: 100%;
+    }
+
+    /* Mobile Tables */
+
+    table {
+        font-size: 12px;
+    }
+
 }
